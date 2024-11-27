@@ -14,4 +14,12 @@
     - echo "domain.com" | assetfinder --subs-only
 3. ffuf
     - fuff http://FUZZ.domain.com -w wordlist or  name -fc 403,500 -v -t threads number
-    - ffuf -w ~/wordlists/subdomains.txt -H "Host: FUZZ.ffuf.me" -u http://ffuf.me 
+    - ffuf -w ~/wordlists/subdomains.txt -H "Host: FUZZ.ffuf.me" -u http://ffuf.me (virtual host attack)
+4. amass
+      - the path yo add apikeys ~/.config/amass/confing.yaml
+      - amass intel -org "tesla" >> to get ASN num and cidr
+      - amass intel -active -asn asnNum
+      - amass intel -active -cidr cidrNum
+##SSL / TLS :
+   - First ou should get the name of company
+   - then , go to https://crt.sh
